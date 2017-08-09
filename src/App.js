@@ -89,29 +89,3 @@ class App extends Component {
 }
 
 export default App;
-
-
-
-
-// Adding debits:
-
-// GIVEN I am on the Debits page
-// WHEN I enter a new Debit description
-// AND WHEN I enter a new Debit amount
-// AND WHEN I click 'Add Debit'
-// THEN I should see my new debit added to the Debits display area with the current date
-// AND I should see my Account Balance updated to reflect the new Debit
-
-
-
-// Adding Credits:
-
-// GIVEN I am on the Credits page
-// WHEN I enter a new Debit description
-// AND WHEN I enter a new Debit amount
-// AND WHEN I click 'Add Debit'
-// THEN I should see my new debit added to the Credits display area with the current date
-// AND I should see my Account Balance updated to reflect the new Debit
-// Viewing the Account Balance on the Credits page:
-
-
