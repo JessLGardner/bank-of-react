@@ -7,9 +7,9 @@ class Debit extends Component {
     render(){
         return(
             <div>
-                <p>{this.props.description}</p>
-                <p>{this.props.amount}</p>
-                <p>{this.props.date}</p>
+                <p>{this.props.debits.description}</p>
+                <p>{this.props.debits.amount}</p>
+                <p>{this.props.debits.date}</p>
             </div>
         );
     }
