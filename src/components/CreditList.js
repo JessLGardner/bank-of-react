@@ -1,24 +1,27 @@
 import React, {Component} from 'react';
 import Credit from './Credit';
 import AccountBalance from './AccountBalance';
+import styled from 'styled-components';
+
+const CreditListStyle = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+`;
 
 
-class CreditList extends Component {
-    
-    
-    render(){
-        return(
-            <div>
-                <h1>Credits</h1>
-                    {this.props.credits.map((credit, i)=>{
+const CreditList = (props) => {
+
+    const creditComponents = props.credits.map((credit, i)=>{
                         return <Credit credits={credit} key={i}/>
-                    })} 
+                    })
 
-                <AccountBalance accountBalance={this.props.accountBalance}/>
-
-            </div>
+     return(
+            <CreditListStyle>
+                    {creditComponents}
+            </CreditListStyle>
         );
-    }
+
 }
 
 export default CreditList;

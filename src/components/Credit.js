@@ -1,17 +1,20 @@
 import React, {Component} from 'react';
+import styled from 'styled-components';
 
+const CreditStyle = styled.div`
+span{
+    font-weight: 700;
+}
+`;
 
 
 class Credit extends Component {
     
     render(){
         return(
-            <div>
-                <p>{this.props.credits.description}</p>
-                <p>{this.props.credits.amount}</p>
-                <p>{this.props.credits.date}</p> 
-                <br/>
-            </div>
+            <CreditStyle>
+                <p>{this.props.credits.description} | <span>${this.props.credits.amount}</span> | {this.props.credits.date}</p> 
+            </CreditStyle>
         );
     }
 }

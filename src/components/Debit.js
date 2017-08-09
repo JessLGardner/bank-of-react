@@ -1,16 +1,20 @@
 import React, {Component} from 'react';
+import styled from 'styled-components';
 
+const DebitStyle = styled.div`
+span{
+    font-weight: 700;
+}
+`;
 
 
 class Debit extends Component {
     
     render(){
         return(
-            <div>
-                <p>{this.props.debits.description}</p>
-                <p>{this.props.debits.amount}</p>
-                <p>{this.props.debits.date}</p>
-            </div>
+            <DebitStyle>
+                <p>{this.props.debits.description} | <span>${this.props.debits.amount}</span> | {this.props.debits.date}</p>
+            </DebitStyle>
         );
     }
 }

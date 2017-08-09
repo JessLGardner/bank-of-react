@@ -3,8 +3,8 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 import axios from 'axios';
 import Home from './components/Home';
 import UserProfile from './components/UserProfile';
-import DebitList from './components/DebitList';
-import CreditList from './components/CreditList';
+import DebitsPage from './components/DebitsPage';
+import CreditsPage from './components/CreditsPage';
 
 
 class App extends Component {
@@ -64,12 +64,12 @@ class App extends Component {
               <UserProfile
                 userName={this.state.currentUser.userName}
                 memberSince={this.state.currentUser.memberSince} />);
-    const DebitListComponent = () => (
-              <DebitList 
+    const DebitsPageComponent = () => (
+              <DebitsPage 
                 debits={this.state.debits} 
                 accountBalance={accountBalance}/>);
-    const CreditListComponent = () => (
-              <CreditList
+    const CreditsPageComponent = () => (
+              <CreditsPage
                 credits={this.state.credits} 
                 accountBalance={accountBalance}/>);
 
@@ -80,8 +80,8 @@ class App extends Component {
         <div>
           <Route exact path="/" render={HomeComponent} />
           <Route exact path="/userProfile" render={UserProfileComponent} />
-          <Route exact path="/debits" render={DebitListComponent}/>
-          <Route exact path="/credits" render={CreditListComponent}/>
+          <Route exact path="/debits" render={DebitsPageComponent}/>
+          <Route exact path="/credits" render={CreditsPageComponent}/>
         </div>
       </Router>
     );
