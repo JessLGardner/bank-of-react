@@ -10,7 +10,7 @@ class CreditList extends Component {
         return(
             <div>
                 <h1>Credits</h1>
-                    {this.props.getCredits.map((credit, i)=>{
+                    {this.props.credits.map((credit, i)=>{
                         return <Credit credits={credit} key={i}/>
                     })} 
 

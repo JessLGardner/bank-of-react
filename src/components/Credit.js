@@ -7,9 +7,10 @@ class Credit extends Component {
     render(){
         return(
             <div>
-                 <p>{this.props.credits.description}</p>
+                <p>{this.props.credits.description}</p>
                 <p>{this.props.credits.amount}</p>
                 <p>{this.props.credits.date}</p> 
+                <br/>
             </div>
         );
     }

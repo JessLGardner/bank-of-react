@@ -66,11 +66,11 @@ class App extends Component {
                 memberSince={this.state.currentUser.memberSince} />);
     const DebitListComponent = () => (
               <DebitList 
-                getDebits={this._getDebits} 
+                debits={this.state.debits} 
                 accountBalance={accountBalance}/>);
     const CreditListComponent = () => (
               <CreditList
-                getCredits={this._getCredits()} 
+                credits={this.state.credits} 
                 accountBalance={accountBalance}/>);
 
 
@@ -93,18 +93,6 @@ export default App;
 
 
 
-
-
-// Displaying debits:
-
-// GIVEN I am on the Debits page
-// WHEN I view the Debits display area
-// THEN I should see all of my debits displayed
-// AND each Debit should display a Debit description
-// AND each Debit should display a Debit amount
-// AND each Debit should display a Debit date
-
-
 // Adding debits:
 
 // GIVEN I am on the Debits page
@@ -114,15 +102,6 @@ export default App;
 // THEN I should see my new debit added to the Debits display area with the current date
 // AND I should see my Account Balance updated to reflect the new Debit
 
-
-// Displaying credits:
-
-// GIVEN I am on the Credits page
-// WHEN I view the Credits display area
-// THEN I should see all of my Credits displayed
-// AND each Debit should display a Debit description
-// AND each Debit should display a Debit amount
-// AND each Debit should display a Debit date
 
 
 // Adding Credits:

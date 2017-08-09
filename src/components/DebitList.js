@@ -10,7 +10,7 @@ class DebitList extends Component {
         return(
             <div>
                 <h1>Debits</h1>
-                    {this.props.getDebits.map((debit, i)=>{
+                    {this.props.debits.map((debit, i)=>{
                         return <Debit debits={debit} key={i}/>
                     })} 
 
